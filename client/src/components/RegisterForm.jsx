@@ -31,7 +31,7 @@ const RegisterForm = () => {
     e.preventDefault();
 
     const res = await axios.post(
-      "https://closeapp-cinema.onrender.com/register",
+      "https://closeapp-cinema.onrender.com/applicant/register",
       {
         lastname,
         firstname,

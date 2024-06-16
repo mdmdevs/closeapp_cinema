@@ -1,6 +1,6 @@
 import ApplicantModel from "../models/applicants.js";
 
-export const registerUser = (req, res) => {
+export const registerUser = async (req, res) => {
   const {
     firstname,
     lastname,
@@ -31,5 +31,6 @@ export const registerUser = (req, res) => {
     name,
     phoneNO,
   });
+  await newApplicant.save();
   res.status(201).send(newApplicant);
 };

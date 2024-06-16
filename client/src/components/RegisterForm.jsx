@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 const RegisterForm = () => {
   const [lastname, setLastname] = useState("");
   const [firstname, setFirstname] = useState("");
@@ -9,26 +9,53 @@ const RegisterForm = () => {
   const [weight, setWeight] = useState(0);
   const [complexion, setComplexion] = useState("");
   const [nationality, setNationality] = useState("");
-  const [birsthday, setBirthday] = useState("");
+  const [birthday, setBirthday] = useState("");
   const [address, setAddress] = useState("");
   const [hometown, setHometown] = useState("");
   const [zipCode, setZipcode] = useState("");
   const [phoneNO, setPhoneNO] = useState("");
   const [lastMovie, setLastmovie] = useState("");
   const [whyActing, setWhyActing] = useState("");
-  const [isHavingCert, setIsHavingCert] = useState("");
+
   const [prevProduction, setPrevProduction] = useState("");
   const [langsSpoken, setLangsSpoken] = useState("");
   const [visitedProduction, setVisitedProduction] = useState("");
   const [currentProduction, setcurrentProduction] = useState("");
   const [witnes, setWitnes] = useState("");
-  const [ocupation, setOccupation] = useState("");
+  const [occupation, setOccupation] = useState("");
 
   const [certificate, setCertificate] = useState("");
+
+  const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log("first");
+    const res = await axios.post("http://localhost:8080/applicant/register", {
+      lastname,
+      firstname,
+      age,
+      nationality,
+      birthday,
+      complexion,
+      zipCode,
+      hometown,
+      phoneNO,
+      address,
+      occupation,
+      currentProduction,
+      visitedProduction,
+      witnes,
+      langsSpoken,
+      lastMovie,
+      whyActing,
+      prevProduction,
+    });
+
+    if (res.status === 201) {
+      navigate("/");
+    } else {
+      return;
+    }
   };
   return (
     <form className="w-full flex-col p-5 gap-10 flex justify-center mx-auto">
@@ -109,6 +136,7 @@ const RegisterForm = () => {
             className="justify-start   text-black w-full max-w-md p-2 border-none outline-none rounded-md"
             placeholder="Phone No"
             type="number"
+            onChange={(e) => setPhoneNO(e.target.value)}
           />
         </div>
         <div className="flex items-center gap-2 w-full max-w-md p-2">

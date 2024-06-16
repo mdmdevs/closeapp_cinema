@@ -3,8 +3,8 @@ import mongoose from "mongoose";
 
 // Replace the following with your MongoDB connection string.
 // Make sure to replace <username>, <password>, and <dbname> with your actual database credentials.
-const mongoURI = process.env.MONGO;
-export const connectDb = async () => {
+
+export const connectDb = async (mongoURI) => {
   await mongoose
     .connect(mongoURI)
     .then(() => {

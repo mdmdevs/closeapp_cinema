@@ -1,0 +1,633 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.7)),url(images/bg.jpg);
+    font-family: montserrat,sans-serif;
+   /* background-color: #ec7909;*/
+   height: 100vh;
+   background-size: cover;
+   background-position: center center;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.nav ul{
+    list-style-type: none;
+    display: flex; 
+    justify-content: right;
+    padding-right: 80px;
+    padding-top: 80px;
+    margin-top: 30px;
+}
+
+.nav ul li{
+    list-style: none;
+    display: inline-block;
+}
+
+.nav ul li a{
+    position: relative;
+    text-decoration: none;
+    margin-left: 20px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 15px;
+    
+}
+
+.nav .logo img{
+    width: 120px;
+    padding-top: 20px;
+    position: absolute;
+}
+
+.nav .bar img{
+    width: 60px;
+    left: 80%;
+    top: 3%;
+    cursor: pointer;
+    padding: 8px;
+    margin: 0;
+}
+
+.nav .bar img:hover{
+    background-color: #e09900;
+}
+
+.nav ul li a:hover{
+    color: #e09900;
+}
+
+/*================================This navbar will popup when the screen size is small=========================*/
+.list{
+    display: none;
+}
+.list ul{
+    list-style-type: none;
+    justify-content: right;
+    display: block;
+    flex-wrap: wrap;
+}
+
+.list ul li{
+    list-style: none;
+    padding: 15px 10px;
+}
+
+.list ul li a{
+    text-decoration: none;
+    color: #e09900;
+    font-weight: 500;
+    font-size: 15px;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.list ul li a:hover{
+    color: #fff;
+    background-color: #e09900;
+}
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+
+.main-content{
+  margin-top: 8%;
+}
+
+.main-content h1{
+    font-size: 60px;
+    text-align: center;
+    color: #e09900;
+}
+
+.main-content p {
+    color: white;
+    padding: 10px 50px;
+    text-align: center;
+}
+
+.box{
+   display: flex;
+   max-width: 800px;
+   margin-left: auto;
+   margin-right: auto;
+   justify-content: center;
+}
+
+.box h1{
+    color: #fff;
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.box button {
+    /* background-color:#fff; */
+    padding: 10px;
+    border-radius: 5px;
+    font: inherit;
+    border: 2px solid transparent;
+    width: 200px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.box button:hover {
+    background-color:  #e09900;
+    color:  #fff;
+}
+
+/*adding media queries to make the webpage responsive*/
+@media(max-width:2000px){
+.bar img{
+    display: none;
+   }
+
+   .lists{
+    display: none;
+   }
+}
+
+@media(max-width:830px){
+    .main-content h1{
+        font-size: 60px;
+    }
+
+    .box{
+        max-width: 600px;
+    }
+    
+    .box h1{
+        font-size: 40px;
+    }
+
+    .main-content{
+        padding-top: 15%;
+      }
+      
+}
+
+@media(max-width:660px){
+    .nav ul{
+       visibility: hidden;
+    }
+
+    .main-content h1{
+        font-size: 50px;
+    }
+
+    .box{
+        max-width: 500px;
+    }
+
+    .box h1{
+        font-size: 30px;
+    }
+
+    .main-content{
+        padding-top: 10%;
+      }
+
+      .bar img{
+        display: flex;
+       }
+
+       .list{
+        display: inline;
+       }
+
+}
+
+@media(max-width:310px){
+    .main-content h1{
+        font-size: 30px;
+    }
+
+    .box{
+        max-width: 300px;
+    }
+
+    .box h1{
+        font-size: 20px;
+    }
+
+      .bar img{
+        display: flex;
+       }
+
+       .list ul li{
+        padding: 10px 5px;
+       }
+
+       .nav .bar img{
+        width: 40px;
+        left: 80%;
+        top: 3%;
+        padding: 8px;
+        margin-right: 10px;
+    }
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+/*Styling for the navbar*/
+nav {
+    background-color: #f6f6f6;
+    padding: 15px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+ul a {
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+}
+
+/*Styling the about page*/
+#about-container, #report-container, #contact-us{
+    display: flex;
+    /*flex-wrap: wrap;*/
+    align-items: center;
+    justify-content:    space-evenly;
+    max-width: 100vw;
+    margin: 2rem 0;
+}
+
+#about-container img, #report-container img, #contact-us img{
+    max-width:  550px;
+    margin-right: 2rem;
+}
+
+#about-container .message{
+    border-radius: 20px;
+}
+
+#about-container .message, #report-container .message{
+    background-color: #f6f6f6;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+}
+
+#about-container .message h2{
+    text-align: center;
+    margin-bottom:  1rem;
+    color:  var(--DEEP-GREEN);
+}
+
+#about-container .message p{
+    margin-bottom: 0.8rem;
+}
+
+#about-container input {
+    font: inherit;
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#about-container textarea {
+    font: inherit;
+    padding: 5px;
+     margin-bottom: 20px;
+     width: 100%;
+}
+
+/*Styling the footer*/
+#footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #181818;
+    width: 100%;
+    flex-wrap: wrap;
+    color: white;
+    bottom: 0;
+    padding: 30px;
+}
+
+#footer img {
+    margin-right: 6px;
+}
+
+#footer a{
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+}
+
+#footer .right-footer {
+    display: flex;
+    align-items: center;
+}
+
+
+/*Adding a general media query to make the site responsive*/
+
+@media screen and (max-width: 1180px){
+#main-profile .left-section .first-div{
+    flex-direction: column;
+    align-items: center;
+}
+
+#main-profile .user-email{
+    text-align: center;
+}
+
+.media-column{
+    flex-direction: column;
+}
+
+#main-profile .left-section .text-contents, #main-profile .call-to-action{
+    justify-content: center;
+    align-items: center;
+}
+
+#main-profile .left-section p{
+    text-align: center;
+}
+
+#main-profile .left-section input[type=text]{
+    display: block;
+    margin: 0 auto;
+}
+}
+
+@media screen and (max-width: 1110px){
+    #about-container, #report-container, #contact-us{
+        flex-direction: column;
+    }
+
+    #about-container img, #contact-us img{
+        margin-right: 0;
+    }
+
+    #contact-us .message{
+        width: 98%;
+        margin-top: 1.5rem;
+    }
+
+    #contact-us img{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 930px){
+    #main-container .job-section{
+        width: 100%;
+        padding: 0;
+    }
+
+    .user-section{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 740px){
+    #main-profile .left-section{
+        padding-right: 8px;
+    }
+
+    #main-profile .left-section h2{
+        font-size: 1rem;
+    }
+
+    #main-profile .right-section{
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 680px){
+#accept-changes button{
+    width: 100%;
+    text-align: center;
+}
+}
+
+@media screen and (max-width: 660px){
+    .job-footer-description{
+        justify-content: space-evenly;
+        text-align: center;
+    }
+
+    #bestMatches .job-footer-description p{
+        margin-right: 0;
+    }
+
+}
+
+
+@media screen and (max-width: 770px){
+nav .hamburgar-icon{
+        display: block;
+    }
+
+nav > *:not(:first-child):not(:last-child) {
+  display: none;
+}
+
+#about-container img, #report-container img, #contact-us img{
+    max-width: 450px;
+}
+
+}
+
+@media screen and (max-width: 770px){
+    #bestMatches .job-tags{
+        display: block;
+    }
+
+    #bestMatches .job-tags p{
+        margin-bottom: 0.5rem;
+    }
+
+    #main-profile .left-section{
+        width: 100%;
+    }
+
+    #main-profile{
+        flex-direction: column;
+    }
+
+    #main-profile .left-section .text-contents{
+        flex-direction: column;
+    }
+
+    #main-profile .call-to-action{
+        margin-top: 1.5rem;
+    }
+
+    #main-profile .right-section{
+        width: 100%;
+    }
+
+#accept-changes{
+    position: relative;
+    margin-top: 2rem;
+}
+
+.basic-info #change-profile-pic{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.basic-info button{
+    width: 100%;
+}
+
+.basic-info input[type=text], .basic-info select{
+    width: 100%;
+}
+
+}
+
+@media screen and (max-width: 520px){
+    footer .follow{
+        display: block;
+        text-align: center;
+    }
+
+    .job-posts .fa-solid{
+        display: none;
+    }
+}
+
+.notification-extra{
+    display: none;
+}
+
+@media screen and (max-width: 440px){
+    #about-container img, #report-container img, #contact-us img{
+    max-width: 300px;
+}
+
+}
+
+
+/*External media queries that has been imported here*/
+/*Beginning of the external media query for the landing page*/
+@media screen and (max-width: 500px){
+    .main-div {
+    width: 100%;
+}
+}
+
+@media screen and (max-width: 730px){
+
+#main-landing-page{
+    flex-direction: column-reverse;
+    padding: 1rem;
+}
+
+#main-landing-page .image-section {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+#main-landing-page .text-section {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+}
+
+#main-landing-page .text-section h1 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+#main-landing-page #clickable-div {
+    display: none;
+}
+
+#second-display-div button{
+    display: block;
+}
+
+#main-landing-page .image-section img {
+  border-radius: 2rem;
+  box-shadow: 1px 1px 5px #222ff042;
+  border: 2px solid #fff;
+}
+
+    #main-landing-page .text-section h1 {
+  font-size: 3rem;
+  line-height: 3.5rem;
+}
+
+#companies {
+    padding: 1rem 0;
+}
+
+.main-div {
+    width: 70%;
+}
+
+}
+
+
+
+@media screen and (min-width: 731px){
+    #main-landing-page #clickable-div {
+        position: static;
+    }
+}
+
+@media screen and (min-width: 580px){
+#main-landing-page .text-section .description {
+  margin-top: 3rem;
+  font-size: 1.5rem;
+}
+}
+
+@media screen and (min-width: 900px){
+#main-landing-page .text-section .description {
+  margin-top: 3rem;
+  font-size: 1rem;
+}
+}
+
+@media screen and (min-width: 1018px){
+#main-landing-page #clickable-div {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    margin-top: 1rem;
+}
+
+#main-landing-page #clickable-div #first-div{
+    margin-bottom: 0.5rem;
+}
+
+#main-landing-page #clickable-div #first-div input{
+    padding: 1rem;
+}
+
+}

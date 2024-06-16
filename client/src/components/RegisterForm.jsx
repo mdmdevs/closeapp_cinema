@@ -30,26 +30,29 @@ const RegisterForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await axios.post("http://localhost:8080/applicant/register", {
-      lastname,
-      firstname,
-      age,
-      nationality,
-      birthday,
-      complexion,
-      zipCode,
-      hometown,
-      phoneNO,
-      address,
-      occupation,
-      currentProduction,
-      visitedProduction,
-      witnes,
-      langsSpoken,
-      lastMovie,
-      whyActing,
-      prevProduction,
-    });
+    const res = await axios.post(
+      "https://closeapp-cinema.onrender.com/register",
+      {
+        lastname,
+        firstname,
+        age,
+        nationality,
+        birthday,
+        complexion,
+        zipCode,
+        hometown,
+        phoneNO,
+        address,
+        occupation,
+        currentProduction,
+        visitedProduction,
+        witnes,
+        langsSpoken,
+        lastMovie,
+        whyActing,
+        prevProduction,
+      }
+    );
 
     if (res.status === 201) {
       navigate("/");
